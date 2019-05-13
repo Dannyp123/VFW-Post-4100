@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block body %}
+<title>VFW | Home</title>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper red darken-1 z-depth-4">
+            <span class="flow-text">VFW Post 4100</span>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Login</a></li>
+</ul>
+<div class="container">
+    <div class="row">
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title center-align">Hours of Operation</span>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title center-align">Location</span>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title center-align">Calendar</span>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
