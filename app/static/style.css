@@ -1,0 +1,44 @@
+.header {
+    font-size: 19pt;
+    margin-top: 28px;
+}
+
+.title {
+    padding-left: 14px;
+}
+
+.home-card {
+    height: 400px;
+}
+
+.body {
+    font-size: 12pt;
+    padding-bottom: 22px;
+}
+
+.spacer {
+    padding-top: 20px
+}
+
+@media only screen and (max-width: 450px) {
+    .calendar {
+        width: 115px;
+        padding-top: 20px;
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .calendar {
+        width: 125px;
+        padding-top: 20px;
+
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .calendar {
+        width: 145px;
+        padding-top: 20px;
+    }
+}
