@@ -7,9 +7,6 @@
     padding-left: 14px;
 }
 
-.home-card {
-    height: 400px;
-}
 
 .body {
     font-size: 12pt;
@@ -20,11 +17,38 @@
     padding-top: 20px
 }
 
+.header-img {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 125px;
+    padding: 14px;
+}
+
+
+
 @media only screen and (max-width: 450px) {
     .calendar {
         width: 115px;
         padding-top: 20px;
 
+    }
+
+    .img-group {
+        width: 130px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+    .home-card {
+        height: 405px;
     }
 }
 
@@ -34,11 +58,41 @@
         padding-top: 20px;
 
     }
+
+    .img-group {
+        width: 120px;
+        display: grid;
+        grid-template-columns: repeat(4, 145px);
+        grid-gap: 28px;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+    .home-card {
+        height: 405px;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
     .calendar {
         width: 145px;
         padding-top: 20px;
+    }
+
+    .img-group {
+        width: 145px;
+        display: grid;
+        grid-template-columns: repeat(4, 160px);
+        grid-gap: 148px;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+    .home-card {
+        height: 405px;
     }
 }
