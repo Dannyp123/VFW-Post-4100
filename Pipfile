@@ -8,6 +8,9 @@ verify_ssl = true
 [packages]
 django = "*"
 psycopg2-binary = "*"
+crispy-forms-materialize = "*"
+crispy-forms = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.6"

@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block body %}
+{% load crispy_forms_tags %}
+<title>VFW | Signing Up</title>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper red darken-4 z-depth-4">
+            <span class="flow-text title">VFW Post 4100</span>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Login</a></li>
+    <li><a href="{% url 'home' %}">Home</a></li>
+</ul>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title center-align">Signing Up</span>
+                <hr>
+                <div class="spacer">
+                    {{ form|crispy }}
+                    {{ form.password.errors }}
+                </div>
+                <div class="spacer d-flex">
+                    <button class="btn waves-effect green darken-3 mr-3" type="submit">Sign Up</button>
+
+    </form>
+    <form action="{% url 'home' %}">
+        <button type="submit" class="btn waves-effect blue darken-3 ">Back</button>
+    </form>
+</div>
+</div>
+{% endblock body %}
