@@ -3,6 +3,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
 
+class UpcomingEventsForm(forms.Form):
+    event_title = forms.CharField()
+    date = forms.DateField()
+    time = forms.TimeField()
+    band = forms.CharField()
+
+
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 

@@ -8,13 +8,16 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
+                <li><a href="{% url 'events' %}">Add Event</a></li>
             </ul>
         </div>
     </nav>
 </div>
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">Login</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
     <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
+    <li><a href="{% url 'events' %}">Add Event</a></li>
+
 
 </ul>
 <div class="col s12 m8 l12">
@@ -24,7 +27,7 @@
     <div class="spacer">
         {% if messages %}
         {% for message in messages %}
-        <div class="center-align blue darken-3 br p-2">
+        <div class="center-align blue darken-3 message-bar">
             <span class="flow-text white-text">{{ message }}</span>
         </div>
     </div>
