@@ -35,10 +35,15 @@
                     <p>{{event.band}}</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="d-flex space">
                 <div class="left-align">
                     <form action="{% url 'all-events' %}">
                         <button class="btn waves-effect blue darken-3">Back</button>
+                    </form>
+                </div>
+                <div class="right-align">
+                    <form action="{% url 'delete-event' event.id %}">
+                        <button class="btn waves-effect red darken-3">Delete</button>
                     </form>
                 </div>
             </div>

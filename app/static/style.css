@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.event-titles{
+.event-titles {
     padding-right: 6px;
     padding-bottom: 8px;
 }
@@ -83,6 +83,10 @@
     .home-card {
         height: 405px;
     }
+
+    .space {
+        justify-content: space-between
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -116,6 +120,10 @@
     .home-card {
         height: 405px;
     }
+
+    .space {
+        justify-content: space-between
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -145,6 +153,10 @@
 
     .home-card {
         height: 405px;
+    }
+
+    .space {
+        justify-content: space-between
     }
 
 }

@@ -61,6 +61,11 @@ class UpcomingEvent(View):
                       {"event": models.UpcomingEvents.objects.get(id=id)})
 
 
+class DeleteEvent(View):
+    def get(self, request, id):
+        models.UpcomingEvents.objects.get(id=id).delete()
+        return redirect("all-events")
+
 @login_required
 def profile(request):
     return render(request, "profile.html")

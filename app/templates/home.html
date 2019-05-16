@@ -85,6 +85,13 @@
                             <button class="btn waves-effect red darken-4" type="submit">Upcoming Events</button>
                         </form>
                         <img src="/static/images/calendar.png" alt="Calendar" class="calendar">
+                        <div class="spacer">
+                            {% if user.is_staff %}
+                            <form action="{% url 'events' %}">
+                                <button class="btn waves-effect blue darken-4" type="submit">Add Event</button>
+                            </form>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>

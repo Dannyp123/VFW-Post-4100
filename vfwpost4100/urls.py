@@ -37,4 +37,7 @@ urlpatterns = [
         views.allUpcomingEvents.as_view(),
         name="all-events"),
     path("event/<id>/", views.UpcomingEvent.as_view(), name="event"),
+    path(
+        "delete-event/<id>/", views.DeleteEvent.as_view(),
+        name="delete-event"),
 ]
