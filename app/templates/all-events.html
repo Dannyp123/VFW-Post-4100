@@ -27,6 +27,11 @@
             <hr>
         </div>
         {% endfor %}
+        <div class="card-content">
+            <form action="{% url 'home' %}">
+                <button class="btn waves-effect blue darken-3">Home</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock body %}

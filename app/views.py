@@ -50,8 +50,9 @@ def register(request):
 
 class allUpcomingEvents(View):
     def get(self, request):
-        return render(request, "all-events.html",
-                      {"events": models.UpcomingEvents.objects.all()})
+        return render(
+            request, "all-events.html",
+            {"events": models.UpcomingEvents.objects.all().order_by("date")})
 
 
 class UpcomingEvent(View):
