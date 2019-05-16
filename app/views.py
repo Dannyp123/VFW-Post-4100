@@ -48,6 +48,18 @@ def register(request):
     return render(request, "sign-up.html", {"form": form})
 
 
+class allUpcomingEvents(View):
+    def get(self, request):
+        return render(request, "all-events.html",
+                      {"events": models.UpcomingEvents.objects.all()})
+
+
+class UpcomingEvent(View):
+    def get(self, request, id):
+        return render(request, "event.html",
+                      {"event": models.UpcomingEvents.objects.get(id=id)})
+
+
 @login_required
 def profile(request):
     return render(request, "profile.html")
