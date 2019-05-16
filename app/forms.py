@@ -20,6 +20,9 @@ class UserRegisterForm(UserCreationForm):
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
-        user.is_staff = True
+        if user.username == "WillE7529":
+            user.is_staff = True
+        else:
+            user.is_staff = False
         user.save()
         return user

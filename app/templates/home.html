@@ -11,7 +11,12 @@
                 <li><a href="{% url 'logout' %}">Logout</a></li>
                 <li><a href="{% url 'events' %}">Add Event</a></li>
                 {% else %}
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
                 {% endif %}
                 <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
             </ul>
@@ -24,7 +29,12 @@
     <li><a href="{% url 'logout' %}">Logout</a></li>
     <li><a href="{% url 'events' %}">Add Event</a></li>
     {% else %}
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'profile' %}">Profile</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
     <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
     {% endif %}
     <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
 </ul>
@@ -72,7 +82,7 @@
                     <hr>
                     <div class="center-align spacer">
                         <form action="{% url 'all-events' %}">
-                            <button class="btn waves-effect red darken-1" type="submit">Upcoming Events</button>
+                            <button class="btn waves-effect red darken-4" type="submit">Upcoming Events</button>
                         </form>
                         <img src="/static/images/calendar.png" alt="Calendar" class="calendar">
                     </div>
