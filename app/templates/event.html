@@ -21,18 +21,25 @@
         <div class="card-content">
             <div class="center-align card-title">{{event.event_title}}</div>
             <hr>
-            <div class="row">
-                <div class="col l6 s12">
-                    <b>Date:</b>
+            <div class="events">
+                <div class="event-items">
+                    <b class="event-titles">Date:</b>
                     <p>{{event.date}}</p>
                 </div>
-                <div class="col l6 s12">
-                    <b>Time:</b>
+                <div class="event-items">
+                    <b class="event-titles">Time:</b>
                     <p>{{event.time}}</p>
                 </div>
-                <div class="col l12 s12">
-                    <b>Band:</b>
+                <div class="event-items">
+                    <b class="event-titles">Band:</b>
                     <p>{{event.band}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left-align">
+                    <form action="{% url 'all-events' %}">
+                        <button class="btn waves-effect blue darken-3">Back</button>
+                    </form>
                 </div>
             </div>
         </div>

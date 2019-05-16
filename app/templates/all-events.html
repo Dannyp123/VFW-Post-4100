@@ -18,7 +18,12 @@
     <div class="card">
         {% for event in events %}
         <div class="card-content">
-            <span class="card-title"><a href="{% url 'event' event.id %}">{{event.event_title}}</a></span>
+            <p class="card-title">
+                <a href="{% url 'event' event.id %}">
+                    {{event.event_title}}
+                </a>
+                <p><small class="text-gray">{{event.date}}</small></p>
+            </p>
             <hr>
         </div>
         {% endfor %}

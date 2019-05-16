@@ -7,6 +7,16 @@
     padding-left: 14px;
 }
 
+.event-items {
+    display: flex;
+    justify-content: center;
+}
+
+.event-titles{
+    padding-right: 6px;
+    padding-bottom: 8px;
+}
+
 
 .body {
     font-size: 12pt;
@@ -92,8 +102,9 @@
     .img-group-two {
         width: 120px;
         display: grid;
-        grid-template-columns: repeat(2, 100px);
-        grid-gap: 15px;
+        grid-template-columns: 145px 145px;
+        padding-left: 172px;
+        grid-gap: 28px;
     }
 
     .military-img {
@@ -135,4 +146,5 @@
     .home-card {
         height: 405px;
     }
+
 }
