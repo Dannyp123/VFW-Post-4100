@@ -30,5 +30,6 @@ urlpatterns = [
         "logout/",
         auth_views.LogoutView.as_view(template_name="logout.html"),
         name="logout"),
-    path("adding-events/", views.MakeEvents.as_view(), name="events")
+    path("adding-events/", views.MakeEvents.as_view(), name="events"),
+    path("profile/", views.profile, name="profile")
 ]

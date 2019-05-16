@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block body %}
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper red darken-4 z-depth-4">
+            <span class="flow-text title">VFW Post 4100</span>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="{% url 'home' %}">Home</a></li>
+</ul>
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="row">
+                <div class="col l6 s12">
+                    <u><span class="card-title center-align">Username </span></u>
+                    <p class="center-align">{{ user.username }}</p>
+                </div>
+                <div class="col l6 s12">
+                    {% if user.email|length == 0 %}
+                    <u><span class="card-title center-align">Email</span></u>
+                    <p class="red-text darken-3 center-align">No email on file</p>
+                    {% else %}
+                    <u><span class="card-title center-align">Email</span></u>
+                    <p class="center-align">{{ user.email }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

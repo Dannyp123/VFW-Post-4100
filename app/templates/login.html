@@ -16,6 +16,15 @@
 </ul>
 </div>
 <div class="container">
+    <div class="spacer">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="center-align blue darken-3 message-bar">
+            <span class="flow-text white-text">{{ message }}</span>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
     <form method="POST">
         {% csrf_token %}
         <div class="card">

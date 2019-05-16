@@ -6,7 +6,12 @@
             <span class="flow-text title">VFW Post 4100</span>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
+                {% if user.is_staff %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
                 <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
                 <li><a href="{% url 'events' %}">Add Event</a></li>
             </ul>
@@ -14,25 +19,19 @@
     </nav>
 </div>
 <ul class="sidenav" id="mobile-demo">
+    {% if user.is_staff %}
+    <li><a href="{% url 'profile' %}">Profile</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
     <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
     <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
     <li><a href="{% url 'events' %}">Add Event</a></li>
-
-
 </ul>
 <div class="col s12 m8 l12">
     <img class="responsive-img header-img" src="/static/images/merica.jpg" alt="Dunn's Country Store">
 </div>
 <div class="container">
-    <div class="spacer">
-        {% if messages %}
-        {% for message in messages %}
-        <div class="center-align blue darken-3 message-bar">
-            <span class="flow-text white-text">{{ message }}</span>
-        </div>
-    </div>
-    {% endfor %}
-    {% endif %}
     <div class="row">
         <div class="col l4 s12">
             <div class="card home-card">
@@ -83,21 +82,21 @@
     </div>
 </div>
 <div class="container">
-    <footer>
-        <div class="row">
-            <div class="img-group">
-                <img class="military-img" src="/static/images/marines.PNG" alt="Marines">
-                <img class="military-img" src="/static/images/navy.PNG" alt="Seals">
-                <img class="military-img" src="/static/images/army.PNG" alt="Army">
-                <img class="military-img" src="/static/images/airforce.PNG" alt="Airforce">
-            </div>
+    <div class="row">
+        <div class="img-group">
+            <img class="military-img" src="/static/images/marines.PNG" alt="Marines">
+            <img class="military-img" src="/static/images/navy.PNG" alt="Seals">
+            <img class="military-img" src="/static/images/army.PNG" alt="Army">
+            <img class="military-img" src="/static/images/airforce.PNG" alt="Airforce">
         </div>
-</div>
-<div class="footer red darken-4">
-    <div class="container">
-        <span class="white-text">Copyright &copy 2019 | VFW Post 4100 | All rights reserved</span>
     </div>
 </div>
+<footer>
+    <div class="footer red darken-4">
+        <div class="container">
+            <span class="white-text">Copyright &copy 2019 | VFW Post 4100 | All rights reserved</span>
+        </div>
+    </div>
 </footer>
 
 {% endblock body %}
