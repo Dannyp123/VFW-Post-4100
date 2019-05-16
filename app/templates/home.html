@@ -9,11 +9,11 @@
                 {% if user.is_staff %}
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="{% url 'events' %}">Add Event</a></li>
                 {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
                 {% endif %}
                 <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
-                <li><a href="{% url 'events' %}">Add Event</a></li>
             </ul>
         </div>
     </nav>
@@ -22,11 +22,11 @@
     {% if user.is_staff %}
     <li><a href="{% url 'profile' %}">Profile</a></li>
     <li><a href="{% url 'logout' %}">Logout</a></li>
+    <li><a href="{% url 'events' %}">Add Event</a></li>
     {% else %}
     <li><a href="{% url 'login' %}">Login</a></li>
     {% endif %}
     <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
-    <li><a href="{% url 'events' %}">Add Event</a></li>
 </ul>
 <div class="col s12 m8 l12">
     <img class="responsive-img header-img" src="/static/images/merica.jpg" alt="Dunn's Country Store">
@@ -88,6 +88,12 @@
             <img class="military-img" src="/static/images/navy.PNG" alt="Seals">
             <img class="military-img" src="/static/images/army.PNG" alt="Army">
             <img class="military-img" src="/static/images/airforce.PNG" alt="Airforce">
+        </div>
+    </div>
+    <div class="row">
+        <div class="img-group-two">
+            <img class="military-img" src="/static/images/coastguard.png" alt="Coast Guard">
+            <img class="military-img" src="/static/images/powmiaflag.png" alt="POW MIA Flag">
         </div>
     </div>
 </div>

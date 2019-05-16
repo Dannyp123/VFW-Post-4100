@@ -61,6 +61,15 @@
         max-width: 100%;
     }
 
+    .img-group-two {
+        width: 130px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     .home-card {
         height: 405px;
     }
@@ -80,9 +89,18 @@
         grid-gap: 28px;
     }
 
+    .img-group-two {
+        width: 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-gap: 15px;
+    }
+
     .military-img {
         max-width: 100%;
     }
+
+
 
     .home-card {
         height: 405px;
@@ -99,6 +117,14 @@
         width: 145px;
         display: grid;
         grid-template-columns: repeat(4, 160px);
+        grid-gap: 148px;
+    }
+
+    .img-group-two {
+        width: 120px;
+        display: grid;
+        grid-template-columns: 160px 160px;
+        padding-left: 310px;
         grid-gap: 148px;
     }
 
