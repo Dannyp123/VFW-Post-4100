@@ -7,8 +7,15 @@ class UpcomingEvents(models.Model):
     date = models.DateField()
     time = models.TimeField()
     band = models.TextField()
+    remarks = models.TextField()
+    location = models.TextField()
 
     @staticmethod
-    def submit_events(event_title, date, time, band):
+    def submit_events(event_title, date, time, band, remarks, location):
         UpcomingEvents(
-            event_title=event_title, date=date, time=time, band=band).save()
+            event_title=event_title,
+            date=date,
+            time=time,
+            band=band,
+            remarks=remarks,
+            location=location).save()

@@ -22,12 +22,15 @@ class MakeEvents(View):
     def post(self, request):
         form = forms.UpcomingEventsForm(data=request.POST)
         if form.is_valid():
-            event_title = form.cleaned_data["event_title"]
-            date = form.cleaned_data["date"]
-            time = form.cleaned_data["time"]
-            band = form.cleaned_data["band"]
+            event_title = form.cleaned_data.get("event_title")
+            date = form.cleaned_data.get("date")
+            time = form.cleaned_data.get("time")
+            band = form.cleaned_data.get("band")
+            remarks = form.cleaned_data.get("remarks")
+            location = form.cleaned_data.get("location")
 
-            models.UpcomingEvents.submit_events(event_title, date, time, band)
+            models.UpcomingEvents.submit_events(event_title, date, time, band,
+                                                remarks, location)
 
             return redirect("home")
         else:
@@ -65,6 +68,7 @@ class DeleteEvent(View):
     def get(self, request, id):
         models.UpcomingEvents.objects.get(id=id).delete()
         return redirect("all-events")
+
 
 @login_required
 def profile(request):

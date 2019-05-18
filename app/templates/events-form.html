@@ -44,7 +44,20 @@
                         {{ events_form.date.errors }}
                         <label for="date">Date</label>
                     </div>
-
+                </div>
+                <div class="row">
+                    <div class="input-feild col l12 s12">
+                        <input id="location" type="text" name="location" class="validate text-black" />
+                        {{ events_form.location.errors }}
+                        <label for="location">Location</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-feild col l12 s12">
+                        <input id="remarks" type="text" name="remarks" class="validate text-black" />
+                        {{ events_form.remarks.errors }}
+                        <label for="remarks">Remarks</label>
+                    </div>
                 </div>
                 <div class="d-flex">
                     <button class="btn waves-effect waves-light mr-3 green darken-3" type="submit">Submit</button>

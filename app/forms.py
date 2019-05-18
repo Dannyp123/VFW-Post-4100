@@ -7,6 +7,8 @@ class UpcomingEventsForm(forms.Form):
     event_title = forms.CharField()
     date = forms.DateField()
     time = forms.TimeField()
+    location = forms.CharField()
+    remarks = forms.CharField(widget=forms.Textarea)
     band = forms.CharField()
 
 
