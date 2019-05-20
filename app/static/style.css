@@ -142,9 +142,9 @@
     .img-group-two {
         width: 120px;
         display: grid;
-        grid-template-columns: 160px 160px;
-        padding-left: 310px;
-        grid-gap: 148px;
+        grid-template-columns: 140px 140px;
+        padding-left: 300px;
+        grid-gap: 138px;
     }
 
     .military-img {
