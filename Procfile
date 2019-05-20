@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn vfwpost4100.wsgi --log-file -

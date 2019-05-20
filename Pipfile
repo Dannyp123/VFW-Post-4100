@@ -6,11 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+"psycopg2-binary" = "*"
 django = "*"
-psycopg2-binary = "*"
+django_heroku="*"
+gunicorn="*"
 crispy-forms-materialize = "*"
-crispy-forms = "*"
 django-crispy-forms = "*"
+sendgrid = "*"
 
 [requires]
 python_version = "3.6"
