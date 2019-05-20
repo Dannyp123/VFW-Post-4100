@@ -136,7 +136,7 @@
         width: 145px;
         display: grid;
         grid-template-columns: repeat(4, 140px);
-        grid-gap: 148px;
+        grid-gap: 138px;
     }
 
     .img-group-two {
