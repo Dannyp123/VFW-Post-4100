@@ -135,7 +135,7 @@
     .img-group {
         width: 145px;
         display: grid;
-        grid-template-columns: repeat(4, 160px);
+        grid-template-columns: repeat(4, 140px);
         grid-gap: 148px;
     }
 
@@ -152,7 +152,7 @@
     }
 
     .home-card {
-        height: 430px;
+        height: 445px;
     }
 
     .space {
