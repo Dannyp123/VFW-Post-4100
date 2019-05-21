@@ -26,11 +26,12 @@
         <!-- {% for event in events %} -->
         <div class="card-content">
             <p class="card-title">
-                <a href="{% url 'event' event.id %}">
-                    {{events.event_title}}
+                {{events|length}}
+                <!-- <a href="{% url 'event' event.id %}">
+                    {{event.event_title}}
                 </a>
-                <p><small class="text-gray darken-3">{{events.date}}</small></p>
-                <p><small class="text-gray">{{events.location}}</small></p>
+                <p><small class="text-gray darken-3">{{event.date}}</small></p>
+                <p><small class="text-gray">{{event.location}}</small></p> -->
             </p>
             <hr>
         </div>
