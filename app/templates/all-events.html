@@ -16,6 +16,13 @@
 </ul>
 <div class="container">
     <div class="card">
+        {% if event|length == 0 %}
+        <div class="card-content">
+            <p class="card-title red-text">
+                <u>No upcoming events</u>
+            </p>
+        </div>
+        {% else %}
         {% for event in events %}
         <div class="card-content">
             <p class="card-title">
@@ -28,6 +35,8 @@
             <hr>
         </div>
         {% endfor %}
+        {% endif %}
+
         <div class="card-content">
             <form action="{% url 'home' %}">
                 <button class="btn waves-effect blue darken-3">Home</button>
