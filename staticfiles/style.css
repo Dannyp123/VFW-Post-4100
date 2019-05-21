@@ -1,0 +1,162 @@
+.header {
+    font-size: 19pt;
+    margin-top: 28px;
+}
+
+.title {
+    padding-left: 14px;
+}
+
+.event-items {
+    display: flex;
+    justify-content: center;
+}
+
+.event-titles {
+    padding-right: 6px;
+    padding-bottom: 8px;
+}
+
+
+.body {
+    font-size: 12pt;
+    padding-bottom: 22px;
+}
+
+.spacer {
+    padding-top: 20px
+}
+
+.header-img {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 125px;
+    padding: 18px;
+    width: 100%
+}
+
+.message-bar {
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.d-flex {
+    display: flex
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .calendar {
+        width: 115px;
+        padding-top: 20px;
+
+    }
+
+    .img-group {
+        width: 130px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+    .img-group-two {
+        width: 130px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .home-card {
+        height: 480px;
+    }
+
+    .space {
+        justify-content: space-between
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .calendar {
+        width: 125px;
+        padding-top: 20px;
+
+    }
+
+    .img-group {
+        width: 120px;
+        display: grid;
+        grid-template-columns: repeat(4, 145px);
+        grid-gap: 28px;
+    }
+
+    .img-group-two {
+        width: 120px;
+        display: grid;
+        grid-template-columns: 145px 145px;
+        padding-left: 172px;
+        grid-gap: 28px;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+
+
+    .home-card {
+        height: 415px;
+    }
+
+    .space {
+        justify-content: space-between
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .calendar {
+        width: 145px;
+        padding-top: 20px;
+    }
+
+    .img-group {
+        width: 145px;
+        display: grid;
+        grid-template-columns: repeat(4, 140px);
+        grid-gap: 138px;
+    }
+
+    .img-group-two {
+        width: 120px;
+        display: grid;
+        grid-template-columns: 140px 140px;
+        padding-left: 280px;
+        grid-gap: 138px;
+    }
+
+    .military-img {
+        max-width: 100%;
+    }
+
+    .home-card {
+        height: 445px;
+    }
+
+    .space {
+        justify-content: space-between
+    }
+
+}
