@@ -121,3 +121,4 @@ LOGIN_URL = "login"
 CRISPY_TEMPLATE_PACK = "materialize_css_forms"
 
 django_heroku.settings(locals())
+DEBUG = False
