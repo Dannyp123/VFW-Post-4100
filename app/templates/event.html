@@ -50,9 +50,12 @@
                     </form>
                 </div>
                 <div class="right-align">
+                    {% if user.is_staff %}
                     <form action="{% url 'delete-event' event.id %}">
                         <button class="btn waves-effect red darken-3">Delete</button>
                     </form>
+                    {% else %}
+                    {% endif %}
                 </div>
             </div>
         </div>
