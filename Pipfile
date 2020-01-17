@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+Django = ">=2.2.9"
 
 [packages]
 "psycopg2-binary" = "*"
